@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { injectIntl } from 'react-intl'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../assets/scss/main.scss'
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, intl }) => {
 
   let content;
 
@@ -39,9 +40,9 @@ const Layout = ({ children, location }) => {
       render={data => (
         <>
           <Helmet
-            title={data.site.siteMetadata.title}
+            title={intl.formatMessage({ id: 'title' })}
             meta={[
-              { name: 'description', content: 'Sample' },
+              { name: 'description', content: intl.formatMessage({ id: 'welcome' }) },
               { name: 'keywords', content: 'sample, something' },
             ]}
           >
@@ -58,4 +59,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default injectIntl(Layout)

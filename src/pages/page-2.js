@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
+import { withIntl, Link } from '../i18n'
 import Layout from '../components/layout'
 
 const SecondPage = () => (
@@ -11,4 +10,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default withIntl(SecondPage)

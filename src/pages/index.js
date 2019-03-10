@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
-
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import { withIntl, Link } from '../i18n'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -112,4 +112,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default withIntl(IndexPage)
