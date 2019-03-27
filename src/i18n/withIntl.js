@@ -12,8 +12,8 @@ export default ComposedComponent => {
     }
 
     constructor(props) {
-      super()
-      const { pathContext: pageContext } = props
+      super(props)
+      const { pageContext: pageContext } = props
       const { locale, languages, originalPath } = pageContext
 
       this.state = {
