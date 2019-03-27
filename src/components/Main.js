@@ -1,11 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'react-intl'
-import { withIntl, Link } from '../i18n'
 
-import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 import _DSC1498 from '../images/_DSC1498.jpg'
 import carolina from '../images/carolina.jpg'
 import _DSC1535 from '../images/_DSC1535.jpg'
