@@ -9,52 +9,104 @@ import _DSC1535 from '../images/_DSC1535.jpg'
 
 class Main extends React.Component {
   render() {
-
-    let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          this.props.onCloseArticle()
+        }}
+      />
+    )
 
     return (
-      <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
-
-        <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+      <div
+        ref={this.props.setWrapperRef}
+        id="main"
+        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
+        <article
+          id="intro"
+          className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}>
           <h2 className="major">Intro</h2>
 
-	    <p>
-	    <FormattedMessage id="intro" values={{ br: <br /> }}/>
-	    </p>
-	  <span className="_DSC1535"><img src={_DSC1535} alt="" width="750"/></span>
+          <p>
+            <FormattedMessage id="intro" values={{ br: <br /> }} />
+          </p>
+          <span className="_DSC1535">
+            <img src={_DSC1535} alt="" width="750" />
+          </span>
           {close}
         </article>
 
-        <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-            <h2 className="major">About Us</h2>
-	    <span className="owen"><img src={_DSC1498} alt="" width="350" /></span>
-	    <span className="carolina"><img src={carolina} alt="" width="350" /></span>
-            <p>
-              <FormattedMessage id="about" values={{ br: <br /> }}/>
-	    </p>
+        <article
+          id="about"
+          className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}>
+          <h2 className="major">About Us</h2>
+          <span className="owen">
+            <img src={_DSC1498} alt="" width="350" />
+          </span>
+          <span className="carolina">
+            <img src={carolina} alt="" width="350" />
+          </span>
+          <p>
+            <FormattedMessage id="about" values={{ br: <br /> }} />
+          </p>
           {close}
         </article>
 
-        <article id="services" className={`${this.props.article === 'services' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article
+          id="services"
+          className={`${this.props.article === 'services' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}>
           <h2 className="major">Services</h2>
-            <span className="image main"><img src={pic02} alt="" /></span>
-	    <FormattedMessage id="services" values={{ br: <br />}}/>
-	    <ul>
-              <li><FormattedMessage id="services_1" /></li>
-              <li><FormattedMessage id="services_2" /></li>
-              <li><FormattedMessage id="services_3" /></li>
-              <li><FormattedMessage id="services_4" /></li>
-              <li><FormattedMessage id="services_5" /></li>
-              <li><FormattedMessage id="services_6" /></li>
-              <li><FormattedMessage id="services_7" /></li>
-              <li><FormattedMessage id="services_8" /></li>
-              <li><FormattedMessage id="services_9" /></li>
-              <li><FormattedMessage id="services_10" /></li>
-            </ul>
+          <span className="image main">
+            <img src={pic02} alt="" />
+          </span>
+          <FormattedMessage id="services" values={{ br: <br /> }} />
+          <ul>
+            <li>
+              <FormattedMessage id="services_1" />
+            </li>
+            <li>
+              <FormattedMessage id="services_2" />
+            </li>
+            <li>
+              <FormattedMessage id="services_3" />
+            </li>
+            <li>
+              <FormattedMessage id="services_4" />
+            </li>
+            <li>
+              <FormattedMessage id="services_5" />
+            </li>
+            <li>
+              <FormattedMessage id="services_6" />
+            </li>
+            <li>
+              <FormattedMessage id="services_7" />
+            </li>
+            <li>
+              <FormattedMessage id="services_8" />
+            </li>
+            <li>
+              <FormattedMessage id="services_9" />
+            </li>
+            <li>
+              <FormattedMessage id="services_10" />
+            </li>
+          </ul>
           {close}
         </article>
 
-	<article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article
+          id="contact"
+          className={`${this.props.article === 'contact' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}>
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">
@@ -67,22 +119,41 @@ class Main extends React.Component {
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" />
             </div>
             <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
+              <li>
+                <input type="submit" value="Send Message" className="special" />
+              </li>
+              <li>
+                <input type="reset" value="Reset" />
+              </li>
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="/" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="/" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li>
+              <a href="/" className="icon fa-twitter">
+                <span className="label">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" className="icon fa-facebook">
+                <span className="label">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" className="icon fa-instagram">
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" className="icon fa-github">
+                <span className="label">GitHub</span>
+              </a>
+            </li>
           </ul>
           {close}
         </article>
-
       </div>
     )
   }
