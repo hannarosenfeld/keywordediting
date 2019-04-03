@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 import pic02 from '../images/pic02.jpg'
 import _DSC1498 from '../images/_DSC1498.jpg'

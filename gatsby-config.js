@@ -20,5 +20,14 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'es'],
+        defaultLanguage: 'en',
+        redirect: true,
+      },
+    },
   ],
 }

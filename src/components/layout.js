@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { injectIntl } from 'react-intl'
 import { StaticQuery, graphql } from 'gatsby'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import '../assets/scss/main.scss'
 

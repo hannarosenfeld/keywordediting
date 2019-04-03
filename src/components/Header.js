@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { FormattedMessage } from 'gatsby-plugin-intl'
+
 import Language from './language'
-import { FormattedMessage } from 'react-intl'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
