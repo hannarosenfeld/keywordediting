@@ -11,7 +11,8 @@ const Header = props => (
     </div>
     <div className="content">
       <div className="inner">
-        <h1>Keywordediting</h1>
+        <Language />
+        <h1>keyword editing</h1>
       </div>
     </div>
     <nav>
@@ -48,9 +49,7 @@ const Header = props => (
             <FormattedMessage id="contactBtn" />
           </button>
         </li>
-        <li>
-          <Language />
-        </li>
+        <li />
       </ul>
     </nav>
   </header>
