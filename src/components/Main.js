@@ -33,7 +33,7 @@ class Main extends React.Component {
             <FormattedMessage id="intro" values={{ br: <br /> }} />
           </p>
           <span className="_DSC1535">
-            <img src={_DSC1535} alt="" width="750" />
+            <img src={_DSC1535} alt="" width="100%" height="auto" />
           </span>
           {close}
         </article>
@@ -44,10 +44,10 @@ class Main extends React.Component {
           style={{ display: 'none' }}>
           <h2 className="major">About Us</h2>
           <span className="owen">
-            <img src={_DSC1498} alt="" width="350" />
+            <img src={_DSC1498} alt="" width="100%" height="auto" />
           </span>
           <span className="carolina">
-            <img src={carolina} alt="" width="350" />
+            <img src={carolina} alt="" width="100%" height="auto" />
           </span>
           <p>
             <FormattedMessage id="about" values={{ br: <br /> }} />
