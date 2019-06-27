@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter - Dimension V2',
+    title: 'Gatsby Starter, Dimension Design, coded by @AppSeed.us',
     author: 'Hunter Chang',
-    description: 'A Gatsby.js V2 Starter based on Dimension by HTML5 UP',
+    description:
+      'A Gatsby.js Starter, Designed by HTML5 UP, Coded by @AppSeed.us',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -24,9 +25,10 @@ module.exports = {
       resolve: 'gatsby-plugin-intl',
       options: {
         path: `${__dirname}/src/intl`,
-        languages: ['en', 'es'],
-        defaultLanguage: 'en',
+        languages: [`en`, `es`],
+        defaultLanguage: `en`,
         redirect: true,
+        redirectComponent: require.resolve(`./src/components/redirect.js`),
       },
     },
   ],
