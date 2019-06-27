@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
-import pic02 from '../images/pic02.jpg'
 import _DSC1498 from '../images/_DSC1498.jpg'
 import carolina from '../images/carolina.jpg'
 import _DSC1535 from '../images/_DSC1535.jpg'
@@ -22,11 +21,15 @@ class Main extends React.Component {
       <div
         ref={this.props.setWrapperRef}
         id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}>
+        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+      >
         <article
           id="intro"
-          className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
-          style={{ display: 'none' }}>
+          className={`${this.props.article === 'intro' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Intro</h2>
 
           <p>
@@ -40,8 +43,11 @@ class Main extends React.Component {
 
         <article
           id="about"
-          className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`}
-          style={{ display: 'none' }}>
+          className={`${this.props.article === 'about' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none' }}
+        >
           <h2 className="major">About Us</h2>
           <span className="owen">
             <img src={_DSC1498} alt="" width="100%" height="auto" />
@@ -60,7 +66,8 @@ class Main extends React.Component {
           className={`${this.props.article === 'services' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}>
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Services</h2>
           <FormattedMessage id="services" values={{ br: <br /> }} />
           <ul>
@@ -103,7 +110,8 @@ class Main extends React.Component {
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
           }`}
-          style={{ display: 'none' }}>
+          style={{ display: 'none' }}
+        >
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">

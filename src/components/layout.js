@@ -12,7 +12,11 @@ const Layout = ({ children, location, intl }) => {
   if (location && location.pathname === '/') {
     content = <div>{children}</div>
   } else {
-    content = <div>{children}</div>
+    content = (
+      <div id="wrapper" className="page">
+        <div>{children}</div>
+      </div>
+    )
   }
 
   return (
@@ -31,9 +35,13 @@ const Layout = ({ children, location, intl }) => {
           <Helmet
             title={intl.formatMessage({ id: 'title' })}
             meta={[
-              { name: 'description', content: intl.formatMessage({ id: 'welcome' }) },
+              {
+                name: 'description',
+                content: intl.formatMessage({ id: 'welcome' }),
+              },
               { name: 'keywords', content: 'sample, something' },
-            ]}>
+            ]}
+          >
             <html lang="en" />
           </Helmet>
           {content}
