@@ -1,10 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'gatsby-plugin-intl'
+import { graphql } from 'gatsby'
 
-import _DSC1498 from '../images/_DSC1498.jpg'
-import carolina from '../images/carolina.jpg'
-import _DSC1535 from '../images/_DSC1535.jpg'
+import Img from 'gatsby-image'
+import Owen_and_Carolina from '../images/Owen_and_Carolina.jpg'
+import Carolina from '../images/Carolina.jpg'
+import Owen from '../images/Owen.jpg'
 
 class Main extends React.Component {
   render() {
@@ -35,8 +37,8 @@ class Main extends React.Component {
           <p>
             <FormattedMessage id="intro" values={{ br: <br /> }} />
           </p>
-          <span className="_DSC1535">
-            <img src={_DSC1535} alt="" width="100%" height="auto" />
+          <span className="Owen_and_Carolina">
+            <img src={Owen_and_Carolina} alt="" width="100%" height="auto" />
           </span>
           {close}
         </article>
@@ -50,10 +52,10 @@ class Main extends React.Component {
         >
           <h2 className="major">About Us</h2>
           <span className="owen">
-            <img src={_DSC1498} alt="" width="100%" height="auto" />
+            <Img fluid={this.props.data.childImageSharp.fluid} />
           </span>
           <span className="carolina">
-            <img src={carolina} alt="" width="100%" height="auto" />
+            <img src={Carolina} alt="" width="100%" height="auto" />
           </span>
           <p>
             <FormattedMessage id="about" values={{ br: <br /> }} />
@@ -152,3 +154,15 @@ Main.propTypes = {
 }
 
 export default Main
+
+export const pageQuery = graphql`
+  query {
+    file(relativePath: { eq: "Owen.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

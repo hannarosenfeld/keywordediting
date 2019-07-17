@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
+import { graphql } from 'gatsby'
 import Language from './language'
 
 const Header = props => (
@@ -21,7 +22,8 @@ const Header = props => (
           <button
             onClick={() => {
               props.onOpenArticle('intro')
-            }}>
+            }}
+          >
             <FormattedMessage id="introBtn" />
           </button>
         </li>
@@ -29,7 +31,8 @@ const Header = props => (
           <button
             onClick={() => {
               props.onOpenArticle('about')
-            }}>
+            }}
+          >
             <FormattedMessage id="aboutBtn" />
           </button>
         </li>
@@ -37,7 +40,8 @@ const Header = props => (
           <button
             onClick={() => {
               props.onOpenArticle('services')
-            }}>
+            }}
+          >
             <FormattedMessage id="servicesBtn" />
           </button>
         </li>
@@ -45,7 +49,8 @@ const Header = props => (
           <button
             onClick={() => {
               props.onOpenArticle('contact')
-            }}>
+            }}
+          >
             <FormattedMessage id="contactBtn" />
           </button>
         </li>
