@@ -4,9 +4,6 @@ import { FormattedMessage } from 'gatsby-plugin-intl'
 import { graphql } from 'gatsby'
 
 import Img from 'gatsby-image'
-import Owen_and_Carolina from '../images/Owen_and_Carolina.jpg'
-import Carolina from '../images/Carolina.jpg'
-import Owen from '../images/Owen.jpg'
 
 class Main extends React.Component {
   render() {
@@ -155,9 +152,23 @@ Main.propTypes = {
 
 export default Main
 
-export const pageQuery = graphql`
-  query {
-    file(relativePath: { eq: "Owen.jpg" }) {
+export const photosQuery = graphql`
+  query photosQuery {
+    owen: file(relativePath: { eq: "Owen.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    carolina: file(relativePath: { eq: "Carolina.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    owenAndCarolina: file(relativePath: { eq: "Owen_and_Carolina.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
