@@ -4,8 +4,12 @@ import Layout from '../components/layout'
 import { withIntl } from 'gatsby-plugin-intl'
 
 import Header from '../components/header'
-import Main from '../components/main'
 import Footer from '../components/footer'
+
+import Intro from '../components/intro'
+import About from '../components/about'
+import Services from '../components/services'
+import Contact from '../components/contact'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -88,6 +92,14 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          this.props.onCloseArticle()
+        }}
+      />
+    )
     return (
       <Layout location={this.props.location}>
         <div
@@ -100,14 +112,47 @@ class IndexPage extends React.Component {
               onOpenArticle={this.handleOpenArticle}
               timeout={this.state.timeout}
             />
-            <Main
-              isArticleVisible={this.state.isArticleVisible}
-              timeout={this.state.timeout}
-              articleTimeout={this.state.articleTimeout}
-              article={this.state.article}
-              onCloseArticle={this.handleCloseArticle}
-              setWrapperRef={this.setWrapperRef}
-            />
+            <div
+              ref={this.props.setWrapperRef}
+              id="main"
+              style={
+                this.props.timeout ? { display: 'flex' } : { display: 'none' }
+              }
+            >
+              <Intro
+                isArticleVisible={this.state.isArticleVisible}
+                timeout={this.state.timeout}
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+                setWrapperRef={this.setWrapperRef}
+              />
+              <About
+                isArticleVisible={this.state.isArticleVisible}
+                timeout={this.state.timeout}
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+                setWrapperRef={this.setWrapperRef}
+              />
+              <Services
+                isArticleVisible={this.state.isArticleVisible}
+                timeout={this.state.timeout}
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+                setWrapperRef={this.setWrapperRef}
+              />
+              <Contact
+                isArticleVisible={this.state.isArticleVisible}
+                timeout={this.state.timeout}
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+                setWrapperRef={this.setWrapperRef}
+              />
+              {close}
+            </div>
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg" />
