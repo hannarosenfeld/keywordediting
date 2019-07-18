@@ -93,7 +93,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.state.location}>
         <div
           className={`body ${this.state.loading} ${
             this.state.isArticleVisible ? 'is-article-visible' : ''
@@ -105,39 +105,31 @@ class IndexPage extends React.Component {
               timeout={this.state.timeout}
             />
             <div
-              ref={this.props.setWrapperRef}
+              ref={this.state.setWrapperRef}
               id="main"
               style={
-                this.props.timeout ? { display: 'flex' } : { display: 'none' }
+                this.state.timeout ? { display: 'flex' } : { display: 'none' }
               }
             >
               <Intro
-                article={this.state.article}
                 articleTimeout={this.state.articleTimeout}
-                isArticleVisible={this.state.isArticleVisible}
-                timeout={this.state.timeout}
-                close={close}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
               />
               <About
-                article={this.state.article}
                 articleTimeout={this.state.articleTimeout}
-                isArticleVisible={this.state.isArticleVisible}
-                timeout={this.state.timeout}
-                close={close}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
               />
               <Services
-                article={this.state.article}
                 articleTimeout={this.state.articleTimeout}
-                isArticleVisible={this.state.isArticleVisible}
-                timeout={this.state.timeout}
-                close={close}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
               />
               <Contact
-                article={this.state.article}
                 articleTimeout={this.state.articleTimeout}
-                isArticleVisible={this.state.isArticleVisible}
-                timeout={this.state.timeout}
-                close={close}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
               />
             </div>
             <Footer timeout={this.state.timeout} />
