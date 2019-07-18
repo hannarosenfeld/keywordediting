@@ -45,6 +45,7 @@ class Services extends React.Component {
             <FormattedMessage id="services_10" />
           </li>
         </ul>
+        {this.props.close}
       </article>
     )
   }

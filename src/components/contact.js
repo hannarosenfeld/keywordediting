@@ -33,6 +33,7 @@ export default class Contact extends React.Component {
             </li>
           </ul>
         </form>
+        {this.props.close}
       </article>
     )
   }

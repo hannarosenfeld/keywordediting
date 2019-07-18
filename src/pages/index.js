@@ -120,38 +120,33 @@ class IndexPage extends React.Component {
               }
             >
               <Intro
+                article={this.state.article}
+                articleTimeout={this.state.articleTimeout}
                 isArticleVisible={this.state.isArticleVisible}
                 timeout={this.state.timeout}
-                articleTimeout={this.state.articleTimeout}
-                article={this.state.article}
-                onCloseArticle={this.handleCloseArticle}
-                setWrapperRef={this.setWrapperRef}
+                close={close}
               />
               <About
+                article={this.state.article}
+                articleTimeout={this.state.articleTimeout}
                 isArticleVisible={this.state.isArticleVisible}
                 timeout={this.state.timeout}
-                articleTimeout={this.state.articleTimeout}
-                article={this.state.article}
-                onCloseArticle={this.handleCloseArticle}
-                setWrapperRef={this.setWrapperRef}
+                close={close}
               />
               <Services
+                article={this.state.article}
+                articleTimeout={this.state.articleTimeout}
                 isArticleVisible={this.state.isArticleVisible}
                 timeout={this.state.timeout}
-                articleTimeout={this.state.articleTimeout}
-                article={this.state.article}
-                onCloseArticle={this.handleCloseArticle}
-                setWrapperRef={this.setWrapperRef}
+                close={close}
               />
               <Contact
+                article={this.state.article}
+                articleTimeout={this.state.articleTimeout}
                 isArticleVisible={this.state.isArticleVisible}
                 timeout={this.state.timeout}
-                articleTimeout={this.state.articleTimeout}
-                article={this.state.article}
-                onCloseArticle={this.handleCloseArticle}
-                setWrapperRef={this.setWrapperRef}
+                close={close}
               />
-              {close}
             </div>
             <Footer timeout={this.state.timeout} />
           </div>

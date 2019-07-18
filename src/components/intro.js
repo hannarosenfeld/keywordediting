@@ -25,6 +25,7 @@ class Intro extends React.Component {
             <span className="Owen_and_Carolina">
               <Img fluid={data.owenAndCarolina.childImageSharp.fluid} />
             </span>
+            {this.props.close}
           </article>
         )}
       />

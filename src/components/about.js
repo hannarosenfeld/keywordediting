@@ -27,6 +27,7 @@ class About extends React.Component {
             <p>
               <FormattedMessage id="about" values={{ br: <br /> }} />
             </p>
+            {this.props.close}
           </article>
         )}
       />
