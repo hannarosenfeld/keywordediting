@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FormattedMessage } from 'gatsby-plugin-intl'
 
-import { graphql } from 'gatsby'
 import Language from './language'
 
 const Header = props => (
