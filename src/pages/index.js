@@ -3,9 +3,9 @@ import Layout from '../components/layout'
 
 import { withIntl } from 'gatsby-plugin-intl'
 
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
+import Header from '../components/header'
+import Main from '../components/main'
+import Footer from '../components/footer'
 
 class IndexPage extends React.Component {
   constructor(props) {
