@@ -92,14 +92,6 @@ class IndexPage extends React.Component {
   }
 
   render() {
-    let close = (
-      <div
-        className="close"
-        onClick={() => {
-          this.props.onCloseArticle()
-        }}
-      />
-    )
     return (
       <Layout location={this.props.location}>
         <div

@@ -3,6 +3,15 @@ import { FormattedMessage } from 'gatsby-plugin-intl'
 
 class Services extends React.Component {
   render() {
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          this.props.onCloseArticle()
+        }}
+      />
+    )
+
     return (
       <article
         id="services"
@@ -45,7 +54,7 @@ class Services extends React.Component {
             <FormattedMessage id="services_10" />
           </li>
         </ul>
-        {this.props.close}
+        {close}
       </article>
     )
   }

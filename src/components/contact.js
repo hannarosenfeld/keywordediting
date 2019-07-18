@@ -2,6 +2,15 @@ import React from 'react'
 
 export default class Contact extends React.Component {
   render() {
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          debugger
+          this.props.onCloseArticle()
+        }}
+      />
+    )
     return (
       <article
         id="contact"
@@ -33,7 +42,7 @@ export default class Contact extends React.Component {
             </li>
           </ul>
         </form>
-        {this.props.close}
+        {close}
       </article>
     )
   }

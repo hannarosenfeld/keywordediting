@@ -6,6 +6,15 @@ import Img from 'gatsby-image'
 
 class About extends React.Component {
   render() {
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          debugger
+          this.props.onCloseArticle()
+        }}
+      />
+    )
     return (
       <StaticQuery
         query={aboutPhotosQuery}
@@ -27,7 +36,7 @@ class About extends React.Component {
             <p>
               <FormattedMessage id="about" values={{ br: <br /> }} />
             </p>
-            {this.props.close}
+            {close}
           </article>
         )}
       />

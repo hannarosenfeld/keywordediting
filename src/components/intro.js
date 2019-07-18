@@ -6,6 +6,16 @@ import Img from 'gatsby-image'
 
 class Intro extends React.Component {
   render() {
+    let close = (
+      <div
+        className="close"
+        onClick={() => {
+          debugger
+          this.props.onCloseArticle()
+        }}
+      />
+    )
+
     return (
       <StaticQuery
         query={introPhotosQuery}
@@ -25,7 +35,7 @@ class Intro extends React.Component {
             <span className="Owen_and_Carolina">
               <Img fluid={data.owenAndCarolina.childImageSharp.fluid} />
             </span>
-            {this.props.close}
+            {close}
           </article>
         )}
       />
