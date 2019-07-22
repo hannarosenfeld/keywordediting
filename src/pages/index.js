@@ -4,8 +4,12 @@ import Layout from '../components/layout'
 import { withIntl } from 'gatsby-plugin-intl'
 
 import Header from '../components/header'
-import Main from '../components/main'
 import Footer from '../components/footer'
+
+import Intro from '../components/intro'
+import About from '../components/about'
+import Services from '../components/services'
+import Contact from '../components/contact'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -89,7 +93,7 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.state.location}>
         <div
           className={`body ${this.state.loading} ${
             this.state.isArticleVisible ? 'is-article-visible' : ''
@@ -100,14 +104,34 @@ class IndexPage extends React.Component {
               onOpenArticle={this.handleOpenArticle}
               timeout={this.state.timeout}
             />
-            <Main
-              isArticleVisible={this.state.isArticleVisible}
-              timeout={this.state.timeout}
-              articleTimeout={this.state.articleTimeout}
-              article={this.state.article}
-              onCloseArticle={this.handleCloseArticle}
-              setWrapperRef={this.setWrapperRef}
-            />
+            <div
+              ref={this.state.setWrapperRef}
+              id="main"
+              style={
+                this.state.timeout ? { display: 'flex' } : { display: 'none' }
+              }
+            >
+              <Intro
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+              />
+              <About
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+              />
+              <Services
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+              />
+              <Contact
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+              />
+            </div>
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg" />
