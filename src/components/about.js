@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage } from 'gatsby-plugin-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Img from 'gatsby-image'
@@ -30,11 +30,14 @@ class About extends React.Component {
             <span className="owen">
               <Img fluid={data.owen.childImageSharp.fluid} />
             </span>
+            <p>
+              <FormattedHTMLMessage id="owen" />
+            </p>
             <span className="carolina">
               <Img fluid={data.carolina.childImageSharp.fluid} />
             </span>
             <p>
-              <FormattedMessage id="about" values={{ br: <br /> }} />
+              <FormattedHTMLMessage id="carolina" />
             </p>
             {close}
           </article>
