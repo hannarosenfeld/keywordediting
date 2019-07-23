@@ -27,14 +27,20 @@ class About extends React.Component {
             style={{ display: 'none' }}
           >
             <h2 className="major">About Us</h2>
+            <p>
+              <FormattedMessage id="about" values={{ br: <br /> }} />
+            </p>
             <span className="owen">
               <Img fluid={data.owen.childImageSharp.fluid} />
             </span>
+            <p>
+              <FormattedMessage id="owen" values={{ br: <br /> }} />
+            </p>
             <span className="carolina">
               <Img fluid={data.carolina.childImageSharp.fluid} />
             </span>
             <p>
-              <FormattedMessage id="about" values={{ br: <br /> }} />
+              <FormattedMessage id="carolina" values={{ br: <br /> }} />
             </p>
             {close}
           </article>
