@@ -26,7 +26,9 @@ class About extends React.Component {
             }`}
             style={{ display: 'none' }}
           >
-            <h2 className="major">About Us</h2>
+            <h2 className="major">
+              <FormattedMessage id="about-title" values={{ br: <br /> }} />
+            </h2>
             <p>
               <FormattedMessage id="about" values={{ br: <br /> }} />
             </p>
