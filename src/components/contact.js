@@ -7,7 +7,6 @@ export default class Contact extends React.Component {
       <div
         className="close"
         onClick={() => {
-          debugger
           this.props.onCloseArticle()
         }}
       />
