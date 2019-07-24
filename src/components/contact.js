@@ -21,7 +21,7 @@ export default class Contact extends React.Component {
         style={{ display: 'none' }}
       >
         <h2 className="major">
-          <FormattedMessage id="contact-title" values={{ br: <br /> }} />
+          <FormattedMessage id="contact-title" />
         </h2>
         <form method="post" action="#">
           <div className="field half first">

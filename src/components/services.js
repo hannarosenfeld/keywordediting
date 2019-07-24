@@ -21,7 +21,7 @@ class Services extends React.Component {
         style={{ display: 'none' }}
       >
         <h2 className="major">
-          <FormattedMessage id="services-title" values={{ br: <br /> }} />
+          <FormattedMessage id="services-title" />
         </h2>
         <FormattedMessage id="services" values={{ br: <br /> }} />
         <ul>
