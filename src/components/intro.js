@@ -30,7 +30,21 @@ class Intro extends React.Component {
               <FormattedMessage id="intro-title" />
             </h2>
             <span className="Owen_and_Carolina">
-              <Img fluid={data.owenAndCarolina.childImageSharp.fluid} />
+              <Img
+                fluid={data.owenAndCarolina.childImageSharp.fluid}
+                style={{
+                  width: '300px',
+                  float: 'right',
+                  marginLeft: '10px',
+                  marginTop: '-50px',
+                }}
+              />
+              <FormattedHTMLMessage
+                id="intro"
+                style={{
+                  float: 'left',
+                }}
+              />
             </span>
             {close}
           </article>
