@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
 
 export default class Contact extends React.Component {
   render() {
@@ -19,7 +20,9 @@ export default class Contact extends React.Component {
         }`}
         style={{ display: 'none' }}
       >
-        <h2 className="major">Contact</h2>
+        <h2 className="major">
+          <FormattedMessage id="contact-title" values={{ br: <br /> }} />
+        </h2>
         <form method="post" action="#">
           <div className="field half first">
             <label htmlFor="name">Name</label>

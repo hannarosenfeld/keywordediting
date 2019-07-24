@@ -27,8 +27,9 @@ class Intro extends React.Component {
             }`}
             style={{ display: 'none' }}
           >
-            <h2 className="major">Intro</h2>
-
+            <h2 className="major">
+              <FormattedMessage id="intro-title" values={{ br: <br /> }} />
+            </h2>
             <p>
               <FormattedMessage id="intro" values={{ br: <br /> }} />
             </p>
