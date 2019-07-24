@@ -29,10 +29,7 @@ class About extends React.Component {
               <FormattedMessage id="about-title" />
             </h2>
             <p>
-              <FormattedMessage
-                id="about"
-                values={({ br: <br /> }, { b: <b /> })}
-              />
+              <FormattedHTMLMessage id="about" />
             </p>
             <div>
               <span className="owen">

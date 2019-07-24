@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage } from 'gatsby-plugin-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Img from 'gatsby-image'
@@ -29,9 +29,6 @@ class Intro extends React.Component {
             <h2 className="major">
               <FormattedMessage id="intro-title" />
             </h2>
-            <p>
-              <FormattedMessage id="intro" values={{ br: <br /> }} />
-            </p>
             <span className="Owen_and_Carolina">
               <Img fluid={data.owenAndCarolina.childImageSharp.fluid} />
             </span>

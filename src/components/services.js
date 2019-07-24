@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage } from 'gatsby-plugin-intl'
+import { FormattedMessage, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 class Services extends React.Component {
   render() {
@@ -23,7 +23,7 @@ class Services extends React.Component {
         <h2 className="major">
           <FormattedMessage id="services-title" />
         </h2>
-        <FormattedMessage id="services" values={{ br: <br /> }} />
+        <FormattedHTMLMessage id="services" />
         <ul>
           <li>
             <FormattedMessage id="services_1" />
