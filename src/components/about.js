@@ -30,7 +30,10 @@ class About extends React.Component {
               <FormattedMessage id="about-title" />
             </h2>
             <p>
-              <FormattedMessage id="about" values={{ br: <br /> }} />
+              <FormattedMessage
+                id="about"
+                values={({ br: <br /> }, { b: <b /> })}
+              />
             </p>
             <span className="owen">
               <Img fluid={data.owen.childImageSharp.fluid} />
