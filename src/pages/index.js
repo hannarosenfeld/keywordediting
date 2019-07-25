@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import { withIntl } from 'gatsby-plugin-intl'
+import { injectIntl } from 'gatsby-plugin-intl'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -141,4 +141,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default withIntl(IndexPage)
+export default injectIntl(IndexPage)
