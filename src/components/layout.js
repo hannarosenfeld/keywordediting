@@ -33,7 +33,7 @@ const Layout = ({ children, location, intl }) => {
       render={data => (
         <>
           <Helmet
-            title={intl.formatMessage({ id: 'title' })}
+            title={intl.formatMessage({ id: 'keywordediting' })}
             meta={[
               {
                 name: 'description',

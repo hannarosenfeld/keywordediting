@@ -10,7 +10,6 @@ class About extends React.Component {
       <div
         className="close"
         onClick={() => {
-          debugger
           this.props.onCloseArticle()
         }}
       />
@@ -30,20 +29,44 @@ class About extends React.Component {
               <FormattedMessage id="about-title" />
             </h2>
             <p>
-              <FormattedMessage id="about" values={{ br: <br /> }} />
+              <FormattedHTMLMessage id="about" />
             </p>
-            <span className="owen">
-              <Img fluid={data.owen.childImageSharp.fluid} />
-            </span>
-            <p>
-              <FormattedHTMLMessage id="owen" />
-            </p>
-            <span className="carolina">
-              <Img fluid={data.carolina.childImageSharp.fluid} />
-            </span>
-            <p>
-              <FormattedHTMLMessage id="carolina" />
-            </p>
+            <div>
+              <span className="owen">
+                <Img
+                  fluid={data.owen.childImageSharp.fluid}
+                  style={{
+                    width: '300px',
+                    float: 'left',
+                    marginRight: '20px',
+                  }}
+                />
+                <FormattedHTMLMessage
+                  id="owen"
+                  style={{
+                    float: 'right',
+                  }}
+                />
+              </span>
+            </div>
+            <div class="container">
+              <span className="carolina">
+                <Img
+                  fluid={data.carolina.childImageSharp.fluid}
+                  style={{
+                    width: '300px',
+                    float: 'left',
+                    marginRight: '20px',
+                  }}
+                />
+                <FormattedHTMLMessage
+                  id="carolina"
+                  style={{
+                    float: 'right',
+                  }}
+                />
+              </span>
+            </div>
             {close}
           </article>
         )}
