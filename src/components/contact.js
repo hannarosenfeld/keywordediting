@@ -22,14 +22,20 @@ export default class Contact extends React.Component {
         <h2 className="major">
           <FormattedMessage id="contact-title" />
         </h2>
-        <form method="post" action="#">
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.handleSubmit}
+        >
           <div className="field half first">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input name="name" id="name" type="text" />
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <input name="email" id="email" type="text" />
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
