@@ -33,10 +33,12 @@ class Intro extends React.Component {
               <Img
                 fluid={data.owenAndCarolina.childImageSharp.fluid}
                 style={{
-                  width: '300px',
+                  width: '375px',
                   float: 'right',
+                  padding: '50px',
+                  margin: '15px',
                   marginLeft: '10px',
-                  marginTop: '-50px',
+                  marginTop: '-30px',
                 }}
               />
               <FormattedHTMLMessage
