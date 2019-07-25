@@ -28,6 +28,7 @@ export default class Contact extends React.Component {
           data-netlify="true"
           data-netlify-honeypot="last_name"
           action="/success/"
+          enctype="application/x-www-form-urlencoded"
         >
           <div className="field half first">
             <label htmlFor="name">Name</label>
