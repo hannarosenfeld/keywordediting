@@ -27,6 +27,7 @@ export default class Contact extends React.Component {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="last_name"
+          action="/success/"
         >
           <div className="field half first">
             <label htmlFor="name">Name</label>
@@ -34,7 +35,7 @@ export default class Contact extends React.Component {
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input name="email" id="email" type="text" />
+            <input name="email" id="email" type="email" />
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
