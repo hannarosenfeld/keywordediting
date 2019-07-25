@@ -24,7 +24,7 @@ export default class Contact extends React.Component {
         </h2>
         <form
           name="contact"
-          method="post"
+          method="POST"
           data-netlify="true"
           data-netlify-honeypot="last_name"
         >
