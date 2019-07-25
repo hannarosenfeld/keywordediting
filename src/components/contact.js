@@ -26,8 +26,7 @@ export default class Contact extends React.Component {
           name="contact"
           method="post"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={this.handleSubmit}
+          data-netlify-honeypot="last_name"
         >
           <div className="field half first">
             <label htmlFor="name">Name</label>
