@@ -16,7 +16,6 @@
   position: relative;
   max-width: 100%;
   z-index: 3;
-  display: none;
 
   article {
     @include vendor('transform', 'translateY(0.25rem)');
@@ -32,17 +31,9 @@
     border-radius: _size(border-radius);
     opacity: 0;
 
-    &.timeout {
-      display: none;
-    }
-
-    &.active.timeout {
+    &.active {
       @include vendor('transform', 'translateY(0)');
       opacity: 1;
-    }
-
-    &.active {
-      display: block !important;
     }
 
     .close {
@@ -85,12 +76,12 @@
         }
       }
     }
-
   }
 
-  @include breakpoint(small) {
+  @include breakpoint('<=small') {
     article {
       @include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
+
       .close {
         &:before {
           top: 0.875rem;
@@ -103,7 +94,7 @@
     }
   }
 
-  @include breakpoint(xsmall) {
+  @include breakpoint('<=xsmall') {
     article {
       @include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
     }
