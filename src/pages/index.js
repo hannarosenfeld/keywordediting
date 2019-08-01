@@ -10,6 +10,7 @@ import Intro from '../components/intro'
 import About from '../components/about'
 import Services from '../components/services'
 import Contact from '../components/contact'
+import Privacy from '../components/privacy'
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -131,8 +132,16 @@ class IndexPage extends React.Component {
                 article={this.state.article}
                 onCloseArticle={this.handleCloseArticle}
               />
+              <Privacy
+                articleTimeout={this.state.articleTimeout}
+                article={this.state.article}
+                onCloseArticle={this.handleCloseArticle}
+              />
             </div>
-            <Footer timeout={this.state.timeout} />
+            <Footer
+              onOpenArticle={this.handleOpenArticle}
+              timeout={this.state.timeout}
+            />
           </div>
           <div id="bg" />
         </div>
