@@ -10,7 +10,12 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
-          '/*': ['X-Frame-Options: ALLOW-FROM http://keywordediting.com/'],
+          '/*': [
+            "Content-Security-Policy: frame-ancestors 'self' https://*.keywordediting.com/",
+            'X-Frame-Options: ALLOW-FROM http://keywordediting.com/',
+            'X-XSS-Protection: 1; mode=block',
+            'X-Content-Type-Options: nosniff',
+          ],
         },
         mergeSecurityHeaders: false,
       },
