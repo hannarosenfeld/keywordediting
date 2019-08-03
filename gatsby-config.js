@@ -6,20 +6,6 @@ module.exports = {
       'A Gatsby.js Starter, Designed by HTML5 UP, Coded by @AppSeed.us',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {
-          '/*': [
-            "Content-Security-Policy: frame-ancestors 'self' http://*.keywordediting.com/",
-            'X-Frame-Options: ALLOW-FROM http://keywordediting.com/',
-            'X-XSS-Protection: 1; mode=block',
-            'X-Content-Type-Options: nosniff',
-          ],
-        },
-        mergeSecurityHeaders: false,
-      },
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
