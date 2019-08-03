@@ -6,6 +6,7 @@ module.exports = {
       'A Gatsby.js Starter, Designed by HTML5 UP, Coded by @AppSeed.us',
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
