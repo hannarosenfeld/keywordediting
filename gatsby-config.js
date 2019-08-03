@@ -11,7 +11,7 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            "Content-Security-Policy: frame-ancestors 'self' https://*.keywordediting.com/",
+            "Content-Security-Policy: frame-ancestors 'self' http://*.keywordediting.com/",
             'X-Frame-Options: ALLOW-FROM http://keywordediting.com/',
             'X-XSS-Protection: 1; mode=block',
             'X-Content-Type-Options: nosniff',
