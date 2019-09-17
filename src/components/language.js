@@ -3,7 +3,7 @@ import { IntlContextConsumer, Link } from 'gatsby-plugin-intl'
 
 const languageName = {
   en: 'English',
-  es: 'Spanish',
+  es: 'Español',
 }
 
 const Language = () => {
@@ -20,7 +20,8 @@ const Language = () => {
                 color: `white`,
                 margin: 10,
                 textDecoration: `underline`,
-              }}>
+              }}
+            >
               {languageName[language]}
             </Link>
           ))
