@@ -12,7 +12,7 @@ const Header = props => (
     <div className="content">
       <div className="inner">
         <Language />
-        <h1>keyword editing</h1>
+        <h1>Keyword Biomedical</h1>
       </div>
     </div>
     <nav>
