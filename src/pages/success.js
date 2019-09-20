@@ -2,7 +2,6 @@ import React from 'react'
 import { injectIntl, FormattedHTMLMessage } from 'gatsby-plugin-intl'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 const SuccessPage = ({ intl }) => (
   <Layout>
