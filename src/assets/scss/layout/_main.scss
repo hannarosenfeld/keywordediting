@@ -32,6 +32,16 @@
     border-radius: _size(border-radius);
     opacity: 0;
 
+    .owen {
+      padding-top: 10px;
+    }
+    .carolina {
+      padding-top: 40px;
+    }
+    img {
+      padding: 0 20px 0 0;
+    }
+
     &.timeout {
       display: none;
     }
@@ -91,6 +101,7 @@
   @include breakpoint(small) {
     article {
       @include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
+      width: 23rem;
       .close {
         &:before {
           top: 0.875rem;
@@ -100,12 +111,19 @@
           background-size: 14px 14px;
         }
       }
+      img {
+        padding: 0 0 15px 0;
+      }
     }
   }
 
   @include breakpoint(xsmall) {
     article {
       @include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
+      img {
+        padding: 0 0 15px 0;
+        width: 270px !important;
+      }
     }
   }
 }

@@ -31,41 +31,45 @@ class About extends React.Component {
             <p>
               <FormattedHTMLMessage id="about" />
             </p>
-            <div>
-              <span className="owen">
+            <div class="container">
+              <div className="owen">
                 <Img
                   fluid={data.owen.childImageSharp.fluid}
                   style={{
                     width: '300px',
                     float: 'left',
-                    marginRight: '20px',
+                    clear: 'both',
+                    display: 'table',
                   }}
                 />
                 <FormattedHTMLMessage
                   id="owen"
                   style={{
                     float: 'right',
+                    clear: 'both',
+                    display: 'table',
                   }}
                 />
-              </span>
-            </div>
-            <div class="container">
-              <span className="carolina">
+              </div>
+              <div className="carolina">
                 <Img
                   fluid={data.carolina.childImageSharp.fluid}
                   style={{
                     width: '300px',
                     float: 'left',
-                    marginRight: '20px',
+                    clear: 'both',
+                    display: 'table',
                   }}
                 />
                 <FormattedHTMLMessage
                   id="carolina"
                   style={{
                     float: 'right',
+                    clear: 'both',
+                    display: 'table',
                   }}
                 />
-              </span>
+              </div>
             </div>
             {close}
           </article>
