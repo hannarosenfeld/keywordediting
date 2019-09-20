@@ -18,6 +18,12 @@
   z-index: 3;
   display: none;
 
+  article#about .carolina {
+    padding-top: 30px;
+  }
+  article#about img {
+    padding: 0 20px 0 0;
+  }
   article {
     @include vendor('transform', 'translateY(0.25rem)');
     @include vendor('transition', (
@@ -32,15 +38,6 @@
     border-radius: _size(border-radius);
     opacity: 0;
 
-    .owen {
-      padding-top: 10px;
-    }
-    .carolina {
-      padding-top: 40px;
-    }
-    img {
-      padding: 0 20px 0 0;
-    }
 
     &.timeout {
       display: none;
@@ -111,19 +108,19 @@
           background-size: 14px 14px;
         }
       }
-      img {
-        padding: 0 0 15px 0;
-      }
+    }
+    article#about img {
+      padding: 0 0 15px 0;
     }
   }
 
   @include breakpoint(xsmall) {
     article {
       @include padding(2rem, 1.5rem, (1rem, 0, 0.5rem, 0));
-      img {
-        padding: 0 0 15px 0;
-        width: 270px !important;
-      }
+    }
+    article#about img {
+      padding: 0 0 15px 0;
+      width: 270px !important;
     }
   }
 }
