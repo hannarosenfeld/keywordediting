@@ -35,10 +35,7 @@ class Intro extends React.Component {
                 style={{
                   width: '375px',
                   float: 'right',
-                  padding: '50px',
                   margin: '15px',
-                  marginLeft: '10px',
-                  marginTop: '-30px',
                 }}
               />
               <FormattedHTMLMessage
